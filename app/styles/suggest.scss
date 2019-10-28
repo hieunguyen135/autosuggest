@@ -1,0 +1,111 @@
+.egg-wrapper {
+  position: relative;
+  .egg-popover {
+    position: absolute;
+    top: calc(100% + 8px);
+    background-color: #fff;
+    box-shadow: 0 0 3px #737373;
+    z-index: 9;
+    width: 100%;
+    &:before {
+      content: "";
+      bottom: 100%;
+      right: 20px;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: transparent;
+      border-bottom-color: #e6e6e6;
+      border-width: 8px;
+    }
+    & > h2 {
+      background-color: #eaeaea;
+      font-size: 13px;
+      color: #525252;
+      padding: 10px 15px;
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      li {
+        padding: 8px 15px;
+        border-top: 1px solid #f1f1f1;
+
+        a {
+          display: flex;
+          color: #525252;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        &:hover {
+          background-color: #f1f1f1;
+          cursor: pointer;
+        }
+        &.media {
+          a {
+            display: flex;
+            img {
+              width: 80px;
+              height: 80px;
+              margin-right: 10px;
+            }
+            h3, h4, h5 {
+              margin: 0 0 5px 0;
+              font-weight: normal;
+              line-height: 1.1;
+            }
+            h3 {
+              font-size: 14px;
+            }
+            h4 {
+              font-size: 13px;
+              font-style: italic;
+              color: #a76c6c;
+              margin-bottom: 10px;
+            }
+            h5 {
+              font-size: 16px;
+            }
+          }
+        }
+        &.no-data {
+          font-size: 12px;
+          font-style: italic;
+          color: #929292;
+          cursor: auto;
+          text-align: center;
+          &:hover {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    & > p {
+      text-align: center;
+      background-color: #f1f1f1;
+      margin: 0;
+      font-size: 13px;
+      padding: 6px 0;
+      a {
+        display: block;
+      }
+    }
+  }
+  mark {
+    line-height: 1.1;
+    background-color: #f9e682;
+  }
+}
+
